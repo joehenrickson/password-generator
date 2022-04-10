@@ -1,3 +1,4 @@
+![alt text](https://github.com/joehenrickson/password-generator/blob/main/screenShot.png?raw=true)
 # password-generator
 
 A password generator to help build a password that is secure based on criteria you set.  
