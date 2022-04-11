@@ -13,3 +13,4 @@ User answers determine the password that is generated.
 
 
 Deployed GitHub Page:  https://joehenrickson.github.io/password-generator/
+GitHub Password-Generator Repository:  https://github.com/joehenrickson/password-generator.git
