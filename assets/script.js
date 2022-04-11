@@ -18,7 +18,7 @@ function writePassword() {
   var allCharacters = [];
   var writePassword = "";
 
-  // Password criteria confirmations 
+  // Password criteria confirmations - Password length
   var confirmLength = prompt(
     'How many characters would you like your password to be?\n8-20');
   if (confirmLength > 7 || confirmLength < 21) {
@@ -29,22 +29,27 @@ function writePassword() {
     alert("Password length must be 8 to 20 characters.\nTry again!");
   }
   else {
+    // Criteria confimation - Uppercase Letters
     if (confirm("Do you want to have uppercase letters?")) {
       alert("You will have uppercase letters in your password.");
       Array.prototype.push.apply(allCharacters, uppercaseLettersArray);
     }
+    // Criteria confimation - Lowercase Letters
     if (confirm("Do you want to have lowercase letters?")) {
       alert("You will have lowercase letters in your password.");
       Array.prototype.push.apply(allCharacters, lowercaseLettersArray);
     }
+    // Criteria confimation - Numbers
     if (confirm("Do you want to have numbers?")) {
       alert("You will have numbers in your password.");
       Array.prototype.push.apply(allCharacters, numArray);
     }
+    // Criteria confimation - Symbols
     if (confirm("Do you want to have symbols?")) {
       alert("You will have symbols in your password.")
       Array.prototype.push.apply(allCharacters, symbolsArray);
     }
+    // Criteria confimation - If no criteria were chosen beyond length, start over.
     if (allCharacters.length === 0) {
       alert("You must select at least one criteria.\nTry again please!");
     }
