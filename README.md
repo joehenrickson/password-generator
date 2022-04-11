@@ -10,3 +10,7 @@ Press the Generate Password button and answer the questions to generate your uni
 Alert messages will ask the user the criteria they wish to set.  
 
 User answers determine the password that is generated. 
+
+
+Deployed GitHub Page:  https://joehenrickson.github.io/password-generator/
+GitHub Password-Generator Repository:  https://github.com/joehenrickson/password-generator.git
