@@ -8,30 +8,17 @@ var symbols = "!@#$%^&*()+=?><{}";
 var symbolsArray = symbols.split("");
 var num = "1234567890";
 var numArray = num.split("");
-
-// Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
-// alert("Please click the Generate Password button to start.");
-
-// Confirm the length of the password
-// function generatePassword() {
-//   var confirmLength = (prompt("How many characters would you like your password to be?"));
-
-//   // If the answer is not supported
-//   while(confirmLength <= 7 || confirmLength >=20) {
-//
-//     var confirmLength = (prompt("How many characters would you like your password to be?"));
-//   }
-
-// }
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
 
 // Write password to the #password input
 function writePassword() {
   var allCharacters = [];
-  var endPass = "";
+  var writePassword = "";
 
-  
+  // Password criteria confirmations 
   var confirmLength = prompt(
     'How many characters would you like your password to be?\n8-20');
   if (confirmLength > 7 || confirmLength < 21) {
@@ -58,8 +45,20 @@ function writePassword() {
       alert("You will have symbols in your password.")
       Array.prototype.push.apply(allCharacters, symbolsArray);
     }
+    if (allCharacters.length === 0) {
+      alert("You must select at least one criteria.\nTry again please!");
+    }
+    // For loop confirmation and password generator
+    else {
+      for (var i = 0; i < confirmLength; i++) {
+        var random = Math.floor(Math.random() * allCharacters.length);
+        writePassword += allCharacters[random];
+      }
   }
 }
+// Password diplay
+document.getElementById("password").innerHTML = writePassword;
+}
 
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+
+
